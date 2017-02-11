@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+  <meta name="author" content="Kasper Moskwiak">
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+	
+  <div class="container">
+    <h1>Stream over tcp and websockets.</h1>
+    <video id="video" width="100%" controls></video>
+  </div>
+
+  <div class="container">
+  <pre>
+# Stream h264
+ffmpeg -f v4l2 -framerate 25 -video_size 640x480 -i /dev/video0  -vcodec libx264 -profile:v main -g 25 -r 25 -b:v 500k -keyint_min 250 -strict experimental -pix_fmt yuv420p -movflags empty_moov+default_base_moof -an -preset ultrafast -f mp4 tcp://localhost:9090
+
+# Stream VP8
+ffmpeg -f v4l2 -framerate 25 -video_size 640x480 -i /dev/video0  -vcodec libvpx -b:v 3500k -r 25 -crf 10 -quality realtime -speed 16 -threads 8 -an -g 25 -f webm tcp://localhost:9090
+  </pre>
+
+
+  </div>
+
+  <script src="js/app.js"></script>
+
+</body>
+</html>

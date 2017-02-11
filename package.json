@@ -1,0 +1,21 @@
+{
+  "name": "node-tcp-streaming-server",
+  "version": "1.0.0",
+  "description": "Streaming video over TCP and WebSockets",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kasper Moskwiak",
+  "license": "ISC",
+  "devDependencies": {
+    "debug": "^2.3.3",
+    "gulp": "^3.9.1",
+    "gulp-develop-server": "^0.5.2",
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "websocket": "^1.0.23"
+  }
+}

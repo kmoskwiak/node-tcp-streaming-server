@@ -1,0 +1,20 @@
+html, body {
+    background: #111;
+    color: #eee;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+pre {
+    font-family: 'Ubuntu Mono';
+    white-space: pre-line;
+}
