@@ -30,6 +30,11 @@ Ingest stream is sent over TCP to node.js server. Every packet of stream is sent
 
 ## How to use
 
+Install
+```
+npm install
+```
+
 Start application
 ``` 
 gulp 
@@ -47,6 +52,6 @@ You can customize ports in `server\app.js` lines `12` and `13`.
 
 ## 'First packet' hack :)
 
-There is little hack in lines `41-44` and `68-76`. Server stores beginning of stream in array which is send to every new client. Every client will receive couple of start frames.
+There is little hack in lines `41-44` and `68-76`. Server stores beginning of stream in array which is sent to every new client. Every client will receive couple of start frames.
 
 Without that hack video won't start for users who start watching in the middle of stream. Perhaps there is solution in better ffmpeg setting. 
